@@ -1,14 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App";
+import Map from "./Components/GoogleMaps";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <React.StrictMode>
-    <div>
-      <App />
-    </div>
+    <Map />
   </React.StrictMode>,
   document.getElementById("root")
 );
