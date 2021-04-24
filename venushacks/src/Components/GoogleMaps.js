@@ -24,10 +24,8 @@ function MyComponent() {
       <GoogleMap
         mapContainerStyle={containerStyle}
         center={{ lat: lat, lng: long }}
-        zoom={15}
+        zoom={18}
       >
-        {/* Child components, such as markers, info windows, etc. */}
-        <></>
         <Marker position={{ lat: lat, lng: long }} />
       </GoogleMap>
     </LoadScript>

@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import Map from "./Components/GoogleMaps";
+import Form from "./Components/Form";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Map />
+    <Form />
   </React.StrictMode>,
   document.getElementById("root")
 );
