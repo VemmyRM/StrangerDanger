@@ -9,7 +9,8 @@ const Form = (props) => {
   const [number, setNumber] = useState(0);
   const [friendName, setFriendName] = useState("");
   const [friendNumber, setFriendNumber] = useState(0);
-  //const [friends, setFriends] = useState([]);
+
+  const [friends, setFriends] = useState([]);
   var fireRef = database.ref("users/" + name + "/friends");
   var newUserRef = fireRef.push();
 
@@ -20,11 +21,6 @@ const Form = (props) => {
       username: name,
       number: number,
     });
-
-    // database.ref('users/' + name + '/friends').set({
-    //     Name: friendName,
-    //     number: friendNumber
-    //     });
 
     newUserRef.set({ [friendName]: friendNumber });
   }
