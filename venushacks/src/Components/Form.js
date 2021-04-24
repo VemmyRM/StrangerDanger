@@ -1,6 +1,7 @@
 import Map from "./GoogleMaps";
 import firebase from "firebase";
 import React, { useState } from "react";
+import "./App.css";
 
 const Form = (props) => {
   var database = firebase.database();
