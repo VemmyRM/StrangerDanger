@@ -3,7 +3,6 @@ import firebase from "firebase";
 import React, { useState } from "react";
 
 const Form = (props) => {
-
   var database = firebase.database();
 
   const [name, setName] = useState("");
@@ -11,29 +10,28 @@ const Form = (props) => {
   const [friendName, setFriendName] = useState("");
   const [friendNumber, setFriendNumber] = useState(0);
   //const [friends, setFriends] = useState([]);
-  var fireRef = database.ref('users/' + name + '/friends');
+  var fireRef = database.ref("users/" + name + "/friends");
   var newUserRef = fireRef.push();
 
   function sendData() {
-    console.log("name: "+name);
-    console.log("number: "+ number);
-    database.ref('users/' + name).set({
+    console.log("name: " + name);
+    console.log("number: " + number);
+    database.ref("users/" + name).set({
       username: name,
-      number: number
-      });
+      number: number,
+    });
 
     // database.ref('users/' + name + '/friends').set({
     //     Name: friendName,
     //     number: friendNumber
     //     });
-      
-    newUserRef.set({ 'name': friendName, 'number': friendNumber });
 
+    newUserRef.set({ [friendName]: friendNumber });
   }
-  
+
   return (
-    <div>
-      <div className="mb-3">
+    <div className="container">
+      <div className="mb-3 mt-5">
         <label for="exampleInputEmail1" className="form-label">
           Name
         </label>
@@ -42,7 +40,7 @@ const Form = (props) => {
           className="form-control"
           id="exampleInputEmail1"
           aria-describedby="emailHelp"
-          onChange={event => setName(event.target.value)}
+          onChange={(event) => setName(event.target.value)}
         />
       </div>
       <div className="mb-3">
@@ -54,11 +52,15 @@ const Form = (props) => {
           className="form-control"
           id="exampleInputEmail1"
           aria-describedby="emailHelp"
-          onChange={event => setNumber(event.target.value)}
+          onChange={(event) => setNumber(event.target.value)}
         />
       </div>
       <div className="mb-3">
-        Enter your friends names!
+        <Map />
+      </div>
+      <h1>Enter your friends names!</h1>
+      <hr />
+      <div className="mb-3">
         <label for="exampleInputEmail1" className="form-label">
           Name
         </label>
@@ -67,7 +69,7 @@ const Form = (props) => {
           className="form-control"
           id="exampleInputEmail1"
           aria-describedby="emailHelp"
-          onChange={event => setFriendName(event.target.value)}
+          onChange={(event) => setFriendName(event.target.value)}
         />
       </div>
       <div className="mb-3">
@@ -79,9 +81,60 @@ const Form = (props) => {
           className="form-control"
           id="exampleInputEmail1"
           aria-describedby="emailHelp"
-          onChange={event => setFriendNumber(event.target.value)}
+          onChange={(event) => setFriendNumber(event.target.value)}
         />
       </div>
+      <hr />
+      <div className="mb-3">
+        <label for="exampleInputEmail1" className="form-label">
+          Name
+        </label>
+        <input
+          type=""
+          className="form-control"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+          onChange={(event) => setFriendName(event.target.value)}
+        />
+      </div>
+      <div className="mb-3">
+        <label for="exampleInputEmail1" className="form-label">
+          Number
+        </label>
+        <input
+          type=""
+          className="form-control"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+          onChange={(event) => setFriendNumber(event.target.value)}
+        />
+      </div>
+      <hr />
+      <div className="mb-3">
+        <label for="exampleInputEmail1" className="form-label">
+          Name
+        </label>
+        <input
+          type=""
+          className="form-control"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+          onChange={(event) => setFriendName(event.target.value)}
+        />
+      </div>
+      <div className="mb-3">
+        <label for="exampleInputEmail1" className="form-label">
+          Number
+        </label>
+        <input
+          type=""
+          className="form-control"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+          onChange={(event) => setFriendNumber(event.target.value)}
+        />
+      </div>
+      <hr />
       <button type="submit" className="btn btn-primary" onClick={sendData}>
         Submit
       </button>
