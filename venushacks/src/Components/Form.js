@@ -9,6 +9,7 @@ const Form = (props) => {
   var database = firebase.database();
 
   const [name, setName] = useState("");
+  const [see, setSee] = useState(false);
   const [number, setNumber] = useState(0);
 
   const [showNextPage, setNextPage] = useState(false);
@@ -50,7 +51,7 @@ const Form = (props) => {
           setNumber={setNumber}
         />
       ) : (
-        <FirstPage setNumber={setNumber} setName={setName} />
+        <FirstPage setNumber={setNumber} setName={setName} setSee={setSee} see={see}  />
       )}
       <br></br>
       <br />
@@ -75,7 +76,7 @@ const Form = (props) => {
       <button
         className="btn btn-primary"
         onClick={() => setNextPage(!showNextPage)}
-        style={{marginTop: '2000px'}}
+        style={{marginTop: '100px'}}
       >
         {showNextPage ? "Back" : "Enter Friends Information"}
       </button>

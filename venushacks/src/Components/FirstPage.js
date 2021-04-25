@@ -1,7 +1,8 @@
 import Map from "./GoogleMaps";
 import MapContainer from "./MapContainer";
+import image1 from "./api.png";
 
-const FirstPage = ({ setNumber, setName }) => {
+const FirstPage = ({ see, setNumber, setName, setSee }) => {
   return (
     <div>
       <br />
@@ -31,13 +32,23 @@ const FirstPage = ({ setNumber, setName }) => {
           onChange={(event) => setNumber(event.target.value)}
         />
         <br />
-        <p>Destination</p>
+      </div>
+      <div className="mb-3">
+        <label for="exampleInputEmail1" className="form-label" >
+        Destination      </label>
+        <input
+          type=""
+          className="form-control"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+          onChange={(event) => setSee(true)}
+        />
+        <br />
         <hr />
       </div>
       <div className="mb-3">
         {/* <Map /> */}
-        <MapContainer />
-
+        {see ? <img src= {image1} style={{width:'510px', height:'450px'}}/>: <MapContainer /> } 
       </div>
     </div>
   );
