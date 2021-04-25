@@ -1,7 +1,8 @@
 import Map from "./GoogleMaps";
 import firebase from "firebase";
 import React, { useState } from "react";
-import "./App.css";
+import "../App.css";
+import SMSForm from "./Sms";
 
 const Form = (props) => {
   var database = firebase.database();
@@ -28,7 +29,8 @@ const Form = (props) => {
 
   return (
     <div className="container">
-      <div className="mb-3 mt-5">
+      <SMSForm />
+      {/* <div className="mb-3 mt-5">
         <label for="exampleInputEmail1" className="form-label">
           Name
         </label>
@@ -134,7 +136,7 @@ const Form = (props) => {
       <hr />
       <button type="submit" className="btn btn-primary" onClick={sendData}>
         Submit
-      </button>
+      </button> */}
     </div>
   );
 };
