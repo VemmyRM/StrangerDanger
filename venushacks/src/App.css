@@ -5,6 +5,11 @@
 body {
   background-image: url("bg.jpeg");
   height: 100%;
+  margin: 2px;
+}
+
+.article:hover {
+  cursor: pointer;
 }
 
 .App-logo {
