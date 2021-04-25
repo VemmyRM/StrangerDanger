@@ -11,7 +11,7 @@ import image2 from "./article2.PNG";
 function LandingPage() {
   return (
     <div>
-      <Navbar bg="dark" variant="dark">
+      <Navbar bg="dark" variant="dark" className="container">
         <Navbar.Brand>Stranger Danger</Navbar.Brand>
         <Nav className="mr-auto">
           <Nav.Link type="submit" href="/signup">
