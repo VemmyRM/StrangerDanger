@@ -59,17 +59,6 @@ function SignUp(){
       <hr />
       <div className="mb-3">
         <label for="exampleInputEmail1" className="form-label">
-          Name
-        </label>
-        <input
-          type=""
-          className="form-control"
-          id="exampleInputEmail1"
-          aria-describedby="emailHelp"
-        />
-      </div>
-      <div className="mb-3">
-        <label for="exampleInputEmail1" className="form-label">
           Number
         </label>
         <input
