@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import FirstPage from "./FirstPage";
 import "../App.css";
 import SecondPage from "./SecondPage";
+import SMS from "./Sms";
 
 const Form = (props) => {
   var database = firebase.database();

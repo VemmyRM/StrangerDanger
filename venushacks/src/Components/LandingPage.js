@@ -1,4 +1,6 @@
 import "../App.css";
+import { Nav, Navbar, Form, FormControl } from 'react-bootstrap';
+
 import React, { useEffect, useState } from "react";
 import {
     Link
@@ -7,14 +9,19 @@ import {
 function LandingPage() {
 
   return (
-    <div className="container">
-        <Link type="submit" className="btn btn-primary" to="/signup">Sign up!</Link>
-        <Link  type="submit" className="btn btn-primary"  to="/submitinfo">Guest</Link>
-        <br />
-        <br />
-            Welcome!
+    <div>
+      <Navbar bg="dark" variant="dark">
+        <Navbar.Brand>WebSiteName</Navbar.Brand>
+          <Nav className="mr-auto">
+            <Nav.Link type="submit" href = '/signup'>Login</Nav.Link>
+            <Nav.Link type="submit" href = '/submitinfo'>Guest</Nav.Link>
+        </Nav>
+      </Navbar>
+      <br />
+      <h1>Welcome!</h1>
     </div>
   );
+
 }
 
 export default LandingPage;
