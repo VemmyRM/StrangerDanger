@@ -20,7 +20,6 @@ const Form = (props) => {
   const [friendName3, setFriendName3] = useState("");
   const [friendNumber3, setFriendNumber3] = useState(0);
 
-  const [friends, setFriends] = useState({ name: "ptk", number: "00" });
   var fireRef = database.ref("users/" + name + "/friends");
 
   function sendData() {
@@ -76,12 +75,13 @@ const Form = (props) => {
       <button
         className="btn btn-primary"
         onClick={() => setNextPage(!showNextPage)}
+        style={{marginTop: '2000px'}}
       >
         {showNextPage ? "Back" : "Enter Friends Information"}
       </button>
       <br />
       <br />
-      <p>Note: The information will be deleted after use</p>
+      <p>Note: The information will be deleted after use.</p>
     </div>
   );
 };
