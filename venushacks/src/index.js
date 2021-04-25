@@ -5,10 +5,10 @@ import App from "./App";
 import Form from "./Components/Form";
 import reportWebVitals from "./reportWebVitals";
 import firebase from "firebase/app";
+import "./App.css";
 
 var firebaseConfig = {
-
-    // apiKey: process.env.REACT_APP_API_KEY,
+  // apiKey: process.env.REACT_APP_API_KEY,
   // authDomain: process.env.REACT_APP_AUTH_DOMAIN,
   // databaseURL: process.env.REACT_APP_DATABASE_URL,
   // projectId: process.env.REACT_APP_PROJECT_ID,
@@ -23,7 +23,7 @@ var firebaseConfig = {
   storageBucket: "venushacks-2a4dc.appspot.com",
   messagingSenderId: "413195790958",
   appId: "1:413195790958:web:284fb251f84b853f15547f",
-  measurementId: "G-EEBL46T565"
+  measurementId: "G-EEBL46T565",
 };
 
 firebase.initializeApp(firebaseConfig);
@@ -36,4 +36,3 @@ ReactDOM.render(
 );
 
 reportWebVitals();
-
