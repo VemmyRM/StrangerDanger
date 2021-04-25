@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import Alert from "./Alert";
 
-const During = () => {
+const During = (props) => {
   const MINUTE_MS = 60000;
-  const [showAlert, setAlert] = useState(false);
+  const [showAlert, setAlert] = useState(true);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -16,7 +16,9 @@ const During = () => {
 
   return (
     <div>
-      {showAlert ? <Alert setAlert={setAlert} /> : null}
+      {showAlert ? (
+        <Alert setAlert={setAlert} name={props.match.params.name} />
+      ) : null}
       <button>Click me for help please</button>
     </div>
   );

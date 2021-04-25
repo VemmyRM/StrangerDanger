@@ -49,6 +49,7 @@ const Form = (props) => {
           sendData={sendData}
           setName={setName}
           setNumber={setNumber}
+          Name={name}
         />
       ) : (
         <FirstPage setNumber={setNumber} setName={setName} setSee={setSee} see={see}  />
@@ -57,7 +58,6 @@ const Form = (props) => {
       <br />
       <br />
       <br />
-      <br /> 
       <br />
       <br />
       <br />
@@ -72,11 +72,16 @@ const Form = (props) => {
       <br />
       <br />
       <br />
-      <br /> 
+      <br />
+      <br />
       <button
         className="btn btn-primary"
         onClick={() => setNextPage(!showNextPage)}
+<<<<<<< HEAD
         style={{marginTop: '100px'}}
+=======
+        style={{ marginTop: "2000px" }}
+>>>>>>> f08efac303142e638661fd5aefb8ce86be0cd85b
       >
         {showNextPage ? "Back" : "Enter Friends Information"}
       </button>
