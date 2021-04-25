@@ -54,6 +54,25 @@ const Form = (props) => {
         <FirstPage setNumber={setNumber} setName={setName} />
       )}
       <br></br>
+      <br />
+      <br />
+      <br />
+      <br /> 
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br /> 
       <button
         className="btn btn-primary"
         onClick={() => setNextPage(!showNextPage)}
