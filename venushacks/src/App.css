@@ -17,6 +17,9 @@ body {
     animation: App-logo-spin infinite 20s linear;
   }
 }
+.navBarLink {
+  margin: 5px;
+}
 
 .App-header {
   background-color: #282c34;
