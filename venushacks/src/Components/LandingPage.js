@@ -10,7 +10,6 @@ function LandingPage() {
 
   return (
     <div>
-      style={{ marginRight: 10 }}
       <Navbar bg="dark" variant="dark">
         <Navbar.Brand className = "NavHeader">Stranger Danger</Navbar.Brand>
           <Nav className="mr-auto">
