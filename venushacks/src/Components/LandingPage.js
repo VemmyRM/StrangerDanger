@@ -9,7 +9,7 @@ import {
 function LandingPage() {
 
   return (
-    <div className = "Nav">
+    <div>
       <Navbar bg="dark" variant="dark">
         <Navbar.Brand>Stranger Danger</Navbar.Brand>
           <Nav className="mr-auto">
