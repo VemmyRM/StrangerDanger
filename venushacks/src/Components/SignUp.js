@@ -1,8 +1,6 @@
 import "../App.css";
 import Map from "./GoogleMaps";
-import {
-  Link
-} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 function SignUp(){
  

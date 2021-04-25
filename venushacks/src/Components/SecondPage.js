@@ -1,5 +1,8 @@
 import "../App.css";
 import Map from "./GoogleMaps";
+import {
+  Link
+} from "react-router-dom";
 
 const SecondPage = ({
   setFriendName,
@@ -94,9 +97,9 @@ const SecondPage = ({
         />
       </div>
       <hr />
-      <button type="submit" className="btn btn-primary" onClick={sendData}>
+      <Link type="submit" className="btn btn-primary" to="/" onClick={sendData} >
         Submit
-      </button>
+      </Link>
     </div>
   );
 };

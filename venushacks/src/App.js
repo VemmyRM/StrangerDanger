@@ -5,12 +5,15 @@ import SignUp from "./Components/SignUp";
 import FirstPage from "./Components/FirstPage";
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import LandingPage from "./Components/LandingPage";
+import MapContainer from "./Components/MapContainer";
+
 
 const App = () => (
   <Router>
     <div>
       <Route exact path="/" component={LandingPage} />
       <Route exact path="/signup" component={SignUp} />
+      <Route exact path="/mapcontainer" component={MapContainer} />
       <Route exact path="/submitinfo" component={Form} />
       <Route exact path="/findfriends_secondpage" component={SecondPage} />
       <Route exact path="/findfriends_firstpage" component={FirstPage} />
