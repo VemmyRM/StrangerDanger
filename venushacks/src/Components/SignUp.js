@@ -11,7 +11,7 @@ function SignUp(){
 
       <h2>Enter your Information</h2>
       <hr />
-      <div className="mb-3 mt-5">
+      <div className="mb-3">
         <label for="exampleInputEmail1" className="form-label">
           Name
         </label>
