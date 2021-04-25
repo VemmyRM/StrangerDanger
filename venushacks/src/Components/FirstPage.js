@@ -1,4 +1,5 @@
 import Map from "./GoogleMaps";
+import MapContainer from "./MapContainer";
 
 const FirstPage = ({ setNumber, setName }) => {
   return (
@@ -34,7 +35,8 @@ const FirstPage = ({ setNumber, setName }) => {
         <hr />
       </div>
       <div className="mb-3">
-        <Map />
+        {/* <Map /> */}
+        <MapContainer />
       </div>
     </div>
   );

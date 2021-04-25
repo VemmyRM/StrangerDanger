@@ -13,7 +13,6 @@ function LandingPage() {
         <br />
         <br />
             Welcome!
-        
     </div>
   );
 }
