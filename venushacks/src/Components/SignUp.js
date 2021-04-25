@@ -9,7 +9,7 @@ function SignUp(){
       <br />
       <h1>Sign Up!</h1>
 
-      <h1>Enter your info</h1>
+      <h2>Enter your Information</h2>
       <hr />
       <div className="mb-3">
         <label for="exampleInputEmail1" className="form-label">
@@ -59,7 +59,7 @@ function SignUp(){
       <hr />
       <div className="mb-3">
         <label for="exampleInputEmail1" className="form-label">
-          Number
+          Phone Number
         </label>
         <input
           type=""
