@@ -3,8 +3,8 @@ import { Map, GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
 import CurrentLocation from './CurrentLocation';
 
 const mapStyles = {
-  width: '60%',
-  height: '60%'
+  width: '10%',
+  height: '10%'
 };
 
 export class MapContainer extends Component {
