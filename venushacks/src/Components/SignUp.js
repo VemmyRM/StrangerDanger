@@ -33,7 +33,6 @@ function SignUp(){
           aria-describedby="emailHelp"
         />
       </div>
-      <hr />
       <div className="mb-3">
         <label for="exampleInputEmail1" className="form-label">
           UserName
@@ -56,7 +55,6 @@ function SignUp(){
           aria-describedby="emailHelp"
         />
       </div>
-      <hr />
       <div className="mb-3">
         <label for="exampleInputEmail1" className="form-label">
           Phone Number
