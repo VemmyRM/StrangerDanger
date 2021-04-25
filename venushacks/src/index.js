@@ -30,7 +30,7 @@ firebase.initializeApp(firebaseConfig);
 
 ReactDOM.render(
   <React.StrictMode>
-    <Form />
+    <App />
   </React.StrictMode>,
   document.getElementById("root")
 );
