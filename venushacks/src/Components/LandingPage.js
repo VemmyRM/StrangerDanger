@@ -12,7 +12,7 @@ function LandingPage() {
     <div>
       style={{ marginRight: 10 }}
       <Navbar bg="dark" variant="dark">
-        <Navbar.Brand style = {{ marginLeft: 5 }} >Stranger Danger</Navbar.Brand>
+        <Navbar.Brand className = "NavHeader">Stranger Danger</Navbar.Brand>
           <Nav className="mr-auto">
             <Nav.Link type="submit" href = '/signup'>Login</Nav.Link>
             <Nav.Link type="submit" href = '/submitinfo'>Guest</Nav.Link>
