@@ -9,8 +9,7 @@ const SecondPage = ({
   setFriendNumber3,
   setFriendName2,
   setFriendNumber2,
-  setName,
-  setNumber,
+  Name,
   sendData,
 }) => {
   return (
@@ -98,7 +97,7 @@ const SecondPage = ({
       <Link
         type="submit"
         className="btn btn-primary"
-        to="/submitted"
+        to={`/submitted/${Name}`}
         onClick={sendData}
       >
         Submit

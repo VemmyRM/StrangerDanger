@@ -1,6 +1,7 @@
 import axios from "axios";
+import firebase from "firebase";
 
-const Alert = ({ setAlert }) => {
+const Alert = ({ setAlert, name }) => {
   async function sendSMS(to, text) {
     const body = {
       to: to,
@@ -16,11 +17,23 @@ const Alert = ({ setAlert }) => {
   function clickedOK() {
     setAlert(false);
     //get list of friends from firebase
+
+    var friendInfoRef = firebase.database().ref("users/" + name + "/friends");
+    friendInfoRef.on("value", (snapshot) => {
+      const data = snapshot.val();
+      console.log(data);
+      let number;
+      Object.keys(data).forEach((obj) => {
+        console.log("obj: " + obj);
+        console.log(Object.values(data[obj]));
+        number = Object.values(data[obj])[0];
+        sendSMS(
+          number,
+          "Friend's Name has just checked in to let us know they're ok. Here is their current location:"
+        );
+      });
+    });
     //for each friend in the database
-    sendSMS(
-      "friendsNumber",
-      "Friend's Name has just checked in to let us know they're ok. Here is their current location:"
-    );
   }
 
   return (
@@ -45,7 +58,7 @@ const Alert = ({ setAlert }) => {
           <div className="modal-footer">
             <button
               type="button"
-              onClick={() => setAlert(false)}
+              onClick={() => clickedOK()}
               className="btn btn-lg btn-success"
             >
               I'm OK!

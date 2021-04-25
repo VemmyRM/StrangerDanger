@@ -17,7 +17,7 @@ const App = () => (
       <Route exact path="/submitinfo" component={Form} />
       <Route exact path="/findfriends_secondpage" component={SecondPage} />
       <Route exact path="/findfriends_firstpage" component={FirstPage} />
-      <Route exact path="/submitted" component={During} />
+      <Route exact path={"/submitted/:name"} component={During} />
     </div>
   </Router>
 );
