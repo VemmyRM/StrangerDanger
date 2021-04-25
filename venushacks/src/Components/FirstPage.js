@@ -37,6 +37,7 @@ const FirstPage = ({ setNumber, setName }) => {
       <div className="mb-3">
         {/* <Map /> */}
         <MapContainer />
+
       </div>
     </div>
   );

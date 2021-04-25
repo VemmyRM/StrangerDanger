@@ -3,10 +3,10 @@ import Form from "./Components/Form";
 import SecondPage from "./Components/SecondPage";
 import SignUp from "./Components/SignUp";
 import FirstPage from "./Components/FirstPage";
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import LandingPage from "./Components/LandingPage";
 import MapContainer from "./Components/MapContainer";
-
+import During from "./Components/During";
 
 const App = () => (
   <Router>
@@ -17,6 +17,7 @@ const App = () => (
       <Route exact path="/submitinfo" component={Form} />
       <Route exact path="/findfriends_secondpage" component={SecondPage} />
       <Route exact path="/findfriends_firstpage" component={FirstPage} />
+      <Route exact path="/submitted" component={During} />
     </div>
   </Router>
 );
