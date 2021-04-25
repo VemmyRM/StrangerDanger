@@ -38,7 +38,7 @@ const Alert = ({ setAlert, name }) => {
 
   return (
     <div className="modal" tabIndex="-1" style={{ display: "block" }}>
-      <div className="modal-dialog">
+      <div className="modal-dialog-centered modal-dialog">
         <div className="modal-content">
           <div className="modal-header">
             <h5 className="modal-title">Hey! We're checking in.</h5>

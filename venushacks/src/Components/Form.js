@@ -37,7 +37,7 @@ const Form = (props) => {
   }
 
   return (
-    <div className="container">
+    <div className="container" style={{height:'900px'}}>
       {showNextPage ? (
         <SecondPage
           setFriendName={setFriendName}
@@ -54,34 +54,11 @@ const Form = (props) => {
       ) : (
         <FirstPage setNumber={setNumber} setName={setName} setSee={setSee} see={see}  />
       )}
-      <br></br>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      
       <button
         className="btn btn-primary"
         onClick={() => setNextPage(!showNextPage)}
-<<<<<<< HEAD
-        style={{marginTop: '100px'}}
-=======
-        style={{ marginTop: "2000px" }}
->>>>>>> f08efac303142e638661fd5aefb8ce86be0cd85b
+        style={{marginTop: '20px',position: 'relative',zIndex: 100}}
       >
         {showNextPage ? "Back" : "Enter Friends Information"}
       </button>

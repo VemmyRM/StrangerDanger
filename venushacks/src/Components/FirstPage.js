@@ -1,10 +1,10 @@
 import Map from "./GoogleMaps";
 import MapContainer from "./MapContainer";
-import image1 from "./api.png";
+import image1 from "./second.png";
 
 const FirstPage = ({ see, setNumber, setName, setSee }) => {
   return (
-    <div>
+    <div    >
       <br />
       <h1>Your Information</h1>
       <hr />
@@ -48,8 +48,35 @@ const FirstPage = ({ see, setNumber, setName, setSee }) => {
       </div>
       <div className="mb-3">
         {/* <Map /> */}
-        {see ? <img src= {image1} style={{width:'510px', height:'450px'}}/>: <MapContainer /> } 
+        {see ? <img src= {image1} style={{width:'450px', height:'500px'}}/>: <div><MapContainer />  <br></br>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+
+      <br />
+      <br />
+      </div> } 
       </div>
+    
     </div>
   );
 };
