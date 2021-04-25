@@ -7,12 +7,15 @@ const Form = (props) => {
 
   const [name, setName] = useState("");
   const [number, setNumber] = useState(0);
-  const [friendName, setFriendName] = useState("");
-  const [friendNumber, setFriendNumber] = useState(0);
+  const [friendName1, setFriendName] = useState("");
+  const [friendNumber1, setFriendNumber] = useState(0);
+  const [friendName2, setFriendName2] = useState("");
+  const [friendNumber2, setFriendNumber2] = useState(0);
+  const [friendName3, setFriendName3] = useState("");
+  const [friendNumber3, setFriendNumber3] = useState(0);
 
-  const [friends, setFriends] = useState([]);
+  const [friends, setFriends] = useState({name:'ptk', number:'00'});
   var fireRef = database.ref("users/" + name + "/friends");
-  var newUserRef = fireRef.push();
 
   function sendData() {
     console.log("name: " + name);
@@ -22,8 +25,12 @@ const Form = (props) => {
       number: number,
     });
 
-    newUserRef.set({ [friendName]: friendNumber });
+    fireRef.push({[friendName1]:friendNumber1});
+    fireRef.push({[friendName2]:friendNumber2});
+    fireRef.push({[friendName3]:friendNumber3});
+    
   }
+
 
   return (
     <div className="container">
@@ -90,7 +97,7 @@ const Form = (props) => {
           className="form-control"
           id="exampleInputEmail1"
           aria-describedby="emailHelp"
-          onChange={(event) => setFriendName(event.target.value)}
+          onChange={(event) => setFriendName2(event.target.value)}
         />
       </div>
       <div className="mb-3">
@@ -102,7 +109,7 @@ const Form = (props) => {
           className="form-control"
           id="exampleInputEmail1"
           aria-describedby="emailHelp"
-          onChange={(event) => setFriendNumber(event.target.value)}
+          onChange={(event) => setFriendNumber2(event.target.value)}
         />
       </div>
       <hr />
@@ -115,7 +122,7 @@ const Form = (props) => {
           className="form-control"
           id="exampleInputEmail1"
           aria-describedby="emailHelp"
-          onChange={(event) => setFriendName(event.target.value)}
+          onChange={(event) => setFriendName3(event.target.value)}
         />
       </div>
       <div className="mb-3">
@@ -127,7 +134,7 @@ const Form = (props) => {
           className="form-control"
           id="exampleInputEmail1"
           aria-describedby="emailHelp"
-          onChange={(event) => setFriendNumber(event.target.value)}
+          onChange={(event) => setFriendNumber3(event.target.value)}
         />
       </div>
       <hr />
