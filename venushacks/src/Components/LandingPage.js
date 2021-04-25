@@ -12,7 +12,7 @@ function LandingPage() {
   return (
     <div>
       <Navbar bg="dark" variant="dark">
-        <Navbar.Brand>WebSiteName</Navbar.Brand>
+        <Navbar.Brand>Stranger Danger</Navbar.Brand>
         <Nav className="mr-auto">
           <Nav.Link type="submit" href="/signup">
             Login
