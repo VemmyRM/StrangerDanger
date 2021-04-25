@@ -4,7 +4,8 @@
 
 body {
   background-image: url("bg.jpeg");
-  height: 90%;
+  height: 100%;
+  margin: 10px;
 }
 
 .App-logo {
@@ -27,7 +28,6 @@ body {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  margin: 10px;
 }
 
 .App-link {
