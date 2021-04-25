@@ -9,13 +9,18 @@ const Form = (props) => {
 
   const [name, setName] = useState("");
   const [number, setNumber] = useState(0);
-  const [friendName, setFriendName] = useState("");
-  const [friendNumber, setFriendNumber] = useState(0);
+
   const [showNextPage, setNextPage] = useState(false);
 
-  const [friends, setFriends] = useState([]);
+  const [friendName1, setFriendName] = useState("");
+  const [friendNumber1, setFriendNumber] = useState(0);
+  const [friendName2, setFriendName2] = useState("");
+  const [friendNumber2, setFriendNumber2] = useState(0);
+  const [friendName3, setFriendName3] = useState("");
+  const [friendNumber3, setFriendNumber3] = useState(0);
+
+  const [friends, setFriends] = useState({ name: "ptk", number: "00" });
   var fireRef = database.ref("users/" + name + "/friends");
-  var newUserRef = fireRef.push();
 
   function sendData() {
     console.log("name: " + name);
@@ -25,7 +30,9 @@ const Form = (props) => {
       number: number,
     });
 
-    newUserRef.set({ [friendName]: friendNumber });
+    fireRef.push({ [friendName1]: friendNumber1 });
+    fireRef.push({ [friendName2]: friendNumber2 });
+    fireRef.push({ [friendName3]: friendNumber3 });
   }
 
   return (
@@ -34,7 +41,13 @@ const Form = (props) => {
         <SecondPage
           setFriendName={setFriendName}
           setFriendNumber={setFriendNumber}
+          setFriendName2={setFriendName2}
+          setFriendNumber2={setFriendNumber2}
+          setFriendName3={setFriendName3}
+          setFriendNumber3={setFriendNumber3}
           sendData={sendData}
+          setName={setName}
+          setNumber={setNumber}
         />
       ) : (
         <FirstPage setNumber={setNumber} setName={setName} />

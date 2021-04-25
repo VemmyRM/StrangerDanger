@@ -1,10 +1,23 @@
 import "../App.css";
+import Map from "./GoogleMaps";
 
-const SecondPage = ({ setFriendName, setFriendNumber, sendData }) => {
+const SecondPage = ({
+  setFriendName,
+  setFriendNumber,
+  setFriendName3,
+  setFriendNumber3,
+  setFriendName2,
+  setFriendNumber2,
+  setName,
+  setNumber,
+  sendData,
+}) => {
   return (
     <div>
       <br />
       <h1>Friend Information</h1>
+
+      <h1>Enter your friends names!</h1>
       <hr />
       <div className="mb-3">
         <label for="exampleInputEmail1" className="form-label">
@@ -20,7 +33,7 @@ const SecondPage = ({ setFriendName, setFriendNumber, sendData }) => {
       </div>
       <div className="mb-3">
         <label for="exampleInputEmail1" className="form-label">
-          Phone Number
+          Number
         </label>
         <input
           type=""
@@ -40,19 +53,19 @@ const SecondPage = ({ setFriendName, setFriendNumber, sendData }) => {
           className="form-control"
           id="exampleInputEmail1"
           aria-describedby="emailHelp"
-          onChange={(event) => setFriendName(event.target.value)}
+          onChange={(event) => setFriendName2(event.target.value)}
         />
       </div>
       <div className="mb-3">
         <label for="exampleInputEmail1" className="form-label">
-          Phone Number
+          Number
         </label>
         <input
           type=""
           className="form-control"
           id="exampleInputEmail1"
           aria-describedby="emailHelp"
-          onChange={(event) => setFriendNumber(event.target.value)}
+          onChange={(event) => setFriendNumber2(event.target.value)}
         />
       </div>
       <hr />
@@ -65,19 +78,19 @@ const SecondPage = ({ setFriendName, setFriendNumber, sendData }) => {
           className="form-control"
           id="exampleInputEmail1"
           aria-describedby="emailHelp"
-          onChange={(event) => setFriendName(event.target.value)}
+          onChange={(event) => setFriendName3(event.target.value)}
         />
       </div>
       <div className="mb-3">
         <label for="exampleInputEmail1" className="form-label">
-          Phone Number
+          Number
         </label>
         <input
           type=""
           className="form-control"
           id="exampleInputEmail1"
           aria-describedby="emailHelp"
-          onChange={(event) => setFriendNumber(event.target.value)}
+          onChange={(event) => setFriendNumber3(event.target.value)}
         />
       </div>
       <hr />
