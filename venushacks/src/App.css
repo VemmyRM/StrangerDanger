@@ -4,7 +4,7 @@
 
 body {
   background-image: url("bg.jpeg");
-  height: 100%;
+  height: 90%;
 }
 
 .App-logo {
@@ -17,9 +17,6 @@ body {
     animation: App-logo-spin infinite 20s linear;
   }
 }
-.navBarLink {
-  margin: 5px;
-}
 
 .App-header {
   background-color: #282c34;
@@ -30,7 +27,7 @@ body {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  margin: 5px;
+  margin: 10px;
 }
 
 .App-link {
