@@ -26,40 +26,65 @@ function LandingPage() {
       <center>
         <h1>Welcome!</h1>
       </center>
-
       <center>
+        <hr />
+        <h3>Safety Tips</h3>
+        <hr />
+      </center>
+      <h7>Women Safety Tips from a Woman Cop</h7>
+      <center>
+        <br />
         <iframe
           className="article"
           src="https://www.corporatetravelsafety.com/safety-tips/women_safety_tips_from_a_woman_cop/"
           style={{
             width: "80%",
-            height: "300px",
+            height: "400px",
             marginBottom: "10px",
           }}
         ></iframe>
       </center>
+      <hr />
+      <h7>How to Identify Dangerous Situations</h7>
       <center>
+        <br />
         <iframe
           className="article"
           src="http://keepthemsafeus.com/identify-dangerous-situations/"
           style={{
             width: "80%",
-            height: "300px",
+            height: "400px",
+            marginBottom: "10px",
+          }}
+        ></iframe>
+      </center>
+      <hr />
+      <h7>Self Defense Moves</h7>
+      <center>
+        <br />
+        <iframe
+          className="article"
+          src="https://www.healthline.com/health/womens-health/self-defense-tips-escape#intro"
+          style={{
+            width: "80%",
+            height: "400px",
             marginBottom: "10px",
           }}
         ></iframe>
       </center>
       <center>
-        <div
+        <hr />
+        <h3>News</h3>
+        <hr />
+        <iframe
           className="article"
+          src="https://www.cbc.ca/news/canada/calgary/attacker-women-walking-alone-calgary-police-vigilance-1.5882785"
           style={{
-            backgroundImage: `url(${image1})`,
             width: "80%",
             height: "300px",
-            backgroundSize: "cover",
             marginBottom: "10px",
           }}
-        ></div>
+        ></iframe>
       </center>
     </div>
   );
