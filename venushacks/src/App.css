@@ -5,7 +5,7 @@
 body {
   background-image: url("bg.jpeg");
   height: 100%;
-  margin: 5px;
+  margin: 2px;
 }
 
 .App-logo {
@@ -17,6 +17,10 @@ body {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+.NavHeader {
+  margin: 5px;
 }
 
 .App-header {
